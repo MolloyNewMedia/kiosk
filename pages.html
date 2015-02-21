@@ -1,0 +1,60 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cat App</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+
+function showonlyone(thechosenone) {
+      var newboxes = document.getElementsByTagName("div");
+            for(var x=0; x<newboxes.length; x++) {
+                  name = newboxes[x].getAttribute("class");
+                  if (name == 'newboxes') {
+                        if (newboxes[x].id == thechosenone) {
+                        newboxes[x].style.display = 'block';
+                  }
+                  else {
+                        newboxes[x].style.display = 'none';
+                  }
+            }
+      }
+}
+</script>
+
+</head>
+
+<body>
+<div class="content" style="position: absolute; left:0; top:0px; width:1024px; height:768px; overflow: hidden;"> 
+<img src="images/img1.png" width="1024" height="768" border="0" usemap="#Image-Maps" /> 
+<!-- href="index.html" -->
+<map id="Image-Maps" name="Image-Maps">
+<area shape="rect" coords="34,29,275,206" href="/index.html" alt="Home" title=""    />
+</map>
+</div>
+
+<div class="buttons" style="position: absolute; left:550px; top:160px; width:450px; height: 200px; display:block; font-family: Georgia, serif; color:#962fbc; font-size: 1.2em">
+<h4><a href="javascript:showonlyone('char1');">Character 1</a> | <a href="javascript:showonlyone('char2');">Character 2</a> | <a href="javascript:showonlyone('char3');">Character 3</a></h4>
+
+</div>
+
+<div class="newboxes" id="char1" style="position: absolute; left:500px; top:200px; width:450px; height: 200px; overflow: hidden; display:block; font-family: Georgia, serif; color:#962fbc; font-size: 5.0em">
+
+<p>Info Character 1</p>
+</div>
+
+<div class="newboxes" id="char2" style="position: absolute; left:500px; top:210px; width:450px; height: 200px; overflow: hidden; display:none; font-family: Georgia, serif; color:#962fbc; font-size: 3em">
+
+<p>Info Character 2</p>
+</div>
+
+
+<div class="newboxes" id="char3" style="position: absolute; left:500px; top:210px; width:450px; height: 200px; overflow: hidden; display:none; font-family: Georgia, serif; color:#962fbc; font-size: 1.7em">
+
+<p>Info Character 3</p>
+</div>
+
+</body>
+</html>
